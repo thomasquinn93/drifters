@@ -1,6 +1,6 @@
 // Written by Thomas Quinn 04/12/17 tom@orbinnovations.com
 // Property of Orb Innovations
-// Laurel v2.00.00
+// Laurel v2.01.00
 
 // Software Revision Code X.YY.ZZ
 // X = Major Hardware Changes (e.g. compnent changes)
@@ -10,10 +10,13 @@
 // Change Log
 // ==========
 // v2.00.00: - Hold Button to Start/Stop Recording.
+// v2.00.00 - Hold Button to Start/Stop Recording.
+// v2.01.00 - Implementing software naming convention.
 
 // Hardware Setup
-// Pin 13 - LED
-// Pin 7  - Button
+// Arduino Nano
+// Adafruit LSM9DS0
+// Adafruit Micro-SD Breakout Board
 
 const int buttonPin = 12;
 const int ledPin    = 13;
