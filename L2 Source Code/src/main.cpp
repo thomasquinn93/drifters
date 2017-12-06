@@ -1,6 +1,6 @@
 // Written by Thomas Quinn 04/12/17 tom@orbinnovations.com
 // Property of Orb Innovations
-// Laurel v2.01.00
+// Laurel v2.01.01
 
 // Software Revision Code X.YY.ZZ
 // X = Major Hardware Changes (e.g. compnent changes)
@@ -18,8 +18,10 @@
 // Adafruit LSM9DS0
 // Adafruit Micro-SD Breakout Board
 
-const int buttonPin = 12;
-const int ledPin    = 13;
+#include "Arduino.h"
+
+const int buttonPin = 2;
+const int ledPin    = 3;
 
 int  current;             // Current state of the button (LOW is pressed b/c pullup resistors)
 long millis_held;         // How long the button was held (milliseconds)
@@ -28,6 +30,8 @@ long prev_secs_held;      // How long the button was held in the previous check
 byte previous = HIGH;
 unsigned long firstTime;  // how long since the button was first pressed
 bool recording = LOW;
+
+void ledblink(int times, int lengthms, int pinnum);
 
 void setup() {
   Serial.begin(9600);             // Use serial for debugging
